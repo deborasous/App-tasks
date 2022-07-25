@@ -13,6 +13,12 @@
     cursor: pointer;
 }
 
+.buttons-container {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .remove-task-button, 
 .info-task-button {
     background-color: #444;

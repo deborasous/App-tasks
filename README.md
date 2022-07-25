@@ -36,6 +36,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Instalar o SERVE 
+npm install -g serve
+serve -s build
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
@@ -77,7 +81,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-### informations React
+### information React
 
 Todo o HTML da página será inserida no id="root" da ./public/index.html através do arquivo ./src/index.js que renderiza o app através do root
 
@@ -120,7 +124,7 @@ STATE => o State é uma variável onde se guarda um valor, que quando alterado e
 export default App; 
 
 -----
-## PROPS
+### PROPs
 São dados passados de um componente pai para um componente filho. 
 
 O componente filho é renderizado pelo componente pai
@@ -132,14 +136,18 @@ As PROPS, assim como o STATE, atualizam e renderizam o elemento quando alterados
 
 ### informations CSS
 
-## Overflow  
+### Overflow  
 cria uma barra de rolagem quando o conteúdo ficar grande demais em um container de tamanho determinado.
 
 
-### BIBLIOTECAS E APIs
+# BIBLIOTECAS E APIs
 
 ## uuid - para gerar ID aleatórios
 npm install uuid
+
+### Create uuii
+import { v4 as uuidv4 } from 'uuid';
+uuidv4();
 
 ## React Icons - para popular icones no React
 npm install react-icons --save 
@@ -161,6 +169,7 @@ import {
 } from "react-router-dom";
 
 ### AXIOS
-
 npm install axios 
 
+### API
+https://jsonplaceholder.cypress.io/todos?_limit=10

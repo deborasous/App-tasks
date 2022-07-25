@@ -12,7 +12,8 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
     }
 
     return (
-        <div //Criar marcação esquerda da task que será acionado pela função onClick={() => handleTaskClick(task.id)
+        <div
+        //Criar marcação esquerda da task que será acionado pela função onClick={() => handleTaskClick(task.id)
             className='task-container'
             style={task.completed ? { borderLeft: '6px solid chartreuse' } : {}}
         > 
@@ -20,7 +21,7 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
             {task.title} 
         </div> 
 
-        <div>
+        <div className='buttons-container'>
             <button 
                 className='info-task-button' onClick={handleTaskDetailsClick}
                 >

@@ -25,9 +25,17 @@ const App = () => {
     },
   ]);
 
-  useEffect(() => {//Será execultado sempre que a task for alterada
-    console.log("task mudou");
-  }, [tasks]);//fica observando as alterações da task
+
+  //-----API------
+  useEffect(() => {//Será execultado sempre que a task for alterada//O useEffect não pode ser assincrono, para isso criar uma função assincrona dentro do useEffect e coloca a API dentro e chama a função async em baixo
+    const fetchTasks = async () => {//dentro do const response tem um arquivo data com as informações de id, title e completed necessarias. Excluir o const response e colocar o const {data}. Para colocar as tarefas dentro das tasks, usar setTasks(data)
+      const { data } = await axios.get('https://jsonplaceholder.cypress.io/todos?_limit=10');
+      
+      setTasks(data);
+    };
+
+    fetchTasks();
+  }, []);//fica observando as alterações da [task] passado como paramentro ou deixa a [] vazia para que para que a requisição HTTP seja execultada assim que a tela for carregada pela primeira vez
 
   //MUDANDO O COMPLET DAS TASKS
   const handleTaskClick = (taskId) => {
