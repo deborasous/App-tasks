@@ -1,5 +1,5 @@
 .button {
-    background-color: chartreuse;
+    background-color: #f7b11b;
     color: #444;
     height: 40px;
     width: 100%;
@@ -13,6 +13,6 @@
 
 .button:hover {
     background-color: #444;
-    color: chartreuse;
+    color: #f7b11b;
     transition: all 0.5s ease;
 }
